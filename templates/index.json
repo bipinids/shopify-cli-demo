@@ -20,11 +20,18 @@
           "settings": {
             "shop_name": "Vegetables Shop"
           }
+        },
+        "d405c9d3-c565-420f-8dc2-01c5d1a7732c": {
+          "type": "shop_description",
+          "settings": {
+            "shop_description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal"
+          }
         }
       },
       "block_order": [
         "c056a2ef-72ed-4826-96eb-5fd026b2e554",
-        "6534b5a9-a1f2-4912-b41a-e54da5b15ab2"
+        "6534b5a9-a1f2-4912-b41a-e54da5b15ab2",
+        "d405c9d3-c565-420f-8dc2-01c5d1a7732c"
       ],
       "settings": {
       }
