@@ -25,9 +25,13 @@
             "settings": {
                 "desktop_text_box_position": "flex-end"
             }
+        },
+        "header": {
+            "type": "header"
         }
     },
     "order": [
+        "header",
         "image_banner"
     ]
 }
