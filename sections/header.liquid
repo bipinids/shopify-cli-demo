@@ -1,4 +1,4 @@
-<div class="header">
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
@@ -41,4 +41,21 @@
           </div>
        </div>
      </div>
-   </div>
+   
+
+   {% schema %}
+{
+  "name": "header",
+  "tag": "div",
+  "class": "header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo-image",
+      "label": "website logo"
+    }
+   
+  ]
+  
+}
+{% endschema %}
