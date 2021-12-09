@@ -9,38 +9,24 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "c056a2ef-72ed-4826-96eb-5fd026b2e554": {
+          "type": "welcome_message",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "medium"
+            "welcome_message": "Welcome To Shree"
           }
         },
-        "button": {
-          "type": "buttons",
+        "6534b5a9-a1f2-4912-b41a-e54da5b15ab2": {
+          "type": "shop_name",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "shop_name": "Vegetables Shop"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "c056a2ef-72ed-4826-96eb-5fd026b2e554",
+        "6534b5a9-a1f2-4912-b41a-e54da5b15ab2"
       ],
       "settings": {
-        "image_height": "medium",
-        "adapt_height_first_image": false,
-        "desktop_text_box_position": "flex-end",
-        "show_text_box": true,
-        "image_overlay_opacity": 0,
-        "color_scheme": "background-1",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     }
   },
