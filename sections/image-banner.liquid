@@ -1,15 +1,113 @@
 
-<div id="Banner-{{ section.id }}" class="banner banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-  Here we go
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+
+      <div class="container-fluid padding_dd">
+        <div class="carousel-caption">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="text-bg">
+               <span>Welcome To Shree</span>
+                <h1>Vegetables Shop</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                <form class="Vegetable">
+          <input class="Vegetable_fom" placeholder="Vegetable" type="text" name=" Vegetable">
+          <button class="Search_btn">Search</button>
+        </form>
+                <a href="#">Contact Us</a> <a href="#">Vegetable</a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="images_box">
+                <figure><img src="images/img2.png"></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+
+      <div class="container-fluid padding_dd">
+        <div class="carousel-caption">
+
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="text-bg">
+                <span>Welcome To Shree</span>
+                <h1>Vegetables Shop</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                <form class="Vegetable">
+          <input class="Vegetable_fom" placeholder="Vegetable" type="text" name=" Vegetable">
+          <button class="Search_btn">Search</button>
+        </form>
+                <a href="#">Contact Us</a> <a href="#">Vegetable</a>
+              </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="images_box">
+                <figure><img src="images/img2.png"></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="carousel-item active">
+
+      <div class="container-fluid padding_dd">
+        <div class="carousel-caption ">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="text-bg">
+                <span>Welcome To Shree</span>
+                <h1>Vegetables Shop</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                 <form class="Vegetable">
+          <input class="Vegetable_fom" placeholder="Vegetable" type="text" name=" Vegetable">
+          <button class="Search_btn">Search</button>
+        </form>
+                <a href="#">Contact Us</a> <a href="#">Vegetable</a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+              <div class="images_box">
+                <figure><img src="images/img2.png"></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<script>
-console.log({{ section.settings | json }})
-</script>
+
+<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+
+
+
 {% schema %}
 {
   "name": "t:sections.image-banner.name",
   "tag": "section",
-  "class": "spaced-section spaced-section--full-width",
+  "class": "slider_section",
   "settings": [
     {
       "type": "image_picker",
@@ -22,217 +120,52 @@ console.log({{ section.settings | json }})
       "label": "t:sections.image-banner.settings.image_2.label"
     },
     {
-      "type": "select",
-      "id": "image_height",
-      "options": [
-        {
-          "value": "small",
-          "label": "t:sections.image-banner.settings.image_height.options__1.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-banner.settings.image_height.options__2.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-banner.settings.image_height.options__3.label"
-        }
-      ],
-      "default": "medium",
-      "label": "t:sections.image-banner.settings.image_height.label",
-      "info": "t:sections.image-banner.settings.image_height.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "adapt_height_first_image",
-      "default": false,
-      "label": "t:sections.image-banner.settings.adapt_height_first_image.label",
-      "info": "t:sections.image-banner.settings.adapt_height_first_image.info"
-    },
-    {
-      "type": "select",
-      "id": "desktop_text_box_position",
-      "options": [
-        {
-          "value": "flex-start",
-          "label": "t:sections.image-banner.settings.desktop_text_box_position.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.image-banner.settings.desktop_text_box_position.options__2.label"
-        },
-        {
-          "value": "flex-end",
-          "label": "t:sections.image-banner.settings.desktop_text_box_position.options__3.label"
-        }
-      ],
-      "default": "center",
-      "label": "t:sections.image-banner.settings.desktop_text_box_position.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_text_box",
-      "default": true,
-      "label": "t:sections.image-banner.settings.show_text_box.label"
-    },
-    {
-      "type": "range",
-      "id": "image_overlay_opacity",
-      "min": 0,
-      "max": 100,
-      "step": 10,
-      "unit": "%",
-      "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
-      "default": 0
-    },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.image-banner.settings.color_scheme.options__1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.image-banner.settings.color_scheme.options__2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.image-banner.settings.color_scheme.options__3.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.image-banner.settings.color_scheme.options__4.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.image-banner.settings.color_scheme.options__5.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.image-banner.settings.color_scheme.label",
-      "info": "t:sections.image-banner.settings.color_scheme.info"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.image-banner.settings.header.content"
-    },
-    {
-      "type": "checkbox",
-      "id": "stack_images_on_mobile",
-      "default": true,
-      "label": "t:sections.image-banner.settings.stack_images_on_mobile.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_text_below",
-      "default": true,
-      "label": "t:sections.image-banner.settings.show_text_below.label"
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "t:sections.image-banner.settings.image_2.label"
     }
   ],
   "blocks": [
     {
-      "type": "heading",
-      "name": "t:sections.image-banner.blocks.heading.name",
+      "type": "welcome_message",
+      "name": "Welcome message",
       "limit": 1,
       "settings": [
         {
           "type": "text",
-          "id": "heading",
-          "default": "Image banner",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "medium",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__1.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__2.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading_size.label"
+          "id": "welcome_message",
+          "default": "Welcome To Shree",
+          "label": "Welcome message"
         }
       ]
     },
     {
-      "type": "text",
-      "name": "t:sections.image-banner.blocks.text.name",
+      "type": "shop_name",
+      "name": "Shop name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
-          "id": "text",
-          "default": "Give customers details about the banner image(s) or content on the template.",
-          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+          "id": "shop_name",
+          "default": "Vegetables Shop",
+          "label": "Shop name"
         }
       ]
     },
     {
-      "type": "buttons",
-      "name": "t:sections.image-banner.blocks.buttons.name",
+      "type": "shop_description",
+      "name": "Shop description",
       "limit": 1,
       "settings": [
         {
           "type": "text",
-          "id": "button_label_1",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_1",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "t:sections.image-banner.presets.name",
-      "blocks": [
-        {
-          "type": "heading"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "buttons"
+          "id": "shop_description",
+          "default": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal",
+          "label": "Shop description"
         }
       ]
     }
   ]
+  
 }
 {% endschema %}
